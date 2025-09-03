@@ -1,0 +1,78 @@
+/* =================== Responsive Styles =================== */
+
+/* Tablets */
+@media (max-width: 768px) {
+  .nav {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 10px;
+  }
+
+  .nav-left, 
+  .nav-fill, 
+  .nav-right {
+    width: 100%;
+    justify-content: center;
+    margin: 5px 0;
+  }
+
+  .nav-search {
+    width: 100%;
+  }
+
+  .search-input {
+    font-size: 0.9rem;
+  }
+
+  .panel {
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .panel-right {
+    width: auto;
+    display: inline-flex;
+  }
+
+  .panel-ops {
+    margin: 0 10px;
+    flex-shrink: 0;
+  }
+
+  .main {
+    height: 180px;
+    background-position: center;
+  }
+
+  .arrow {
+    font-size: 24px;
+    padding: 6px;
+  }
+
+  .footer-panel-4 {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  .lists {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .footer-lists-grid {
+    grid-template-columns: 1fr 1fr;
+    padding-left: 20px;
+  }
+}
+
+/* Phones */
+@media (max-width: 480px) {
+  .shop-section {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-lists-grid {
+    grid-template-columns: 1fr;
+  }
+}
