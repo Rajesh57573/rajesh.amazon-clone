@@ -68,11 +68,76 @@
 
 /* Phones */
 @media (max-width: 480px) {
-  .shop-section {
-    grid-template-columns: 1fr;
+  /* Already existing (from previous steps) */
+  .nav-language,
+  .nav-return {
+    display: none !important;
   }
 
-  .footer-lists-grid {
-    grid-template-columns: 1fr;
+  .panel {
+    overflow-x: hidden;
+    white-space: nowrap;
+  }
+
+  .panel-left{
+    display: none;
+  }
+  .panel-right {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+
+  .panel-ops {
+    display: inline-block;
+    white-space: nowrap;
+    flex-shrink: 0;
+    font-size: 0.8rem;
+    padding: 8px;
+  }
+
+  .panel-ops:nth-child(n+4) {
+    display: none;
+  }
+
+  .panel-right::-webkit-scrollbar {
+    display: none;
+  }
+
+  .shop-section {
+    display: flex;
+    flex-wrap: wrap; /* keep it in one row */
+    overflow-x: auto;  /* allow horizontal scroll if content overflows */
+    gap: 10px;     /* full viewport width */
+    padding: 0 10px;        /* remove side padding if any */        /* remove side margin if any */
+  }
+
+  .shop-section > * {
+    flex: 1 1 100%; /* don't shrink items */
+    max-width: 100%;    /* each item fills 80% of viewport width, adjust as needed */
+  }
+
+  /* ✅ New: Hide Footer Panels 4, 5, 6, and 7 */
+  .footer-panel-4,
+  .footer-panel-5,
+  .footer-panel-6,
+  .footer-panel-7 {
+    display: none;
+  }
+}
+
+@media (max-width: 360px) {
+  .nav-left {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .nav-left .address {
+    font-size: 0.75rem;
+    white-space: normal; /* allow wrapping */
+  }
+
+  .nav-left .update-location {
+    font-size: 0.75rem;
   }
 }
