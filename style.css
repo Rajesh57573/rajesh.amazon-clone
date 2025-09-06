@@ -8,6 +8,7 @@ html,body{
   height: 100%;
   width: 100%;
   font-family: sans-serif;
+  overflow-x: hidden;
 }
 
 header {
@@ -48,7 +49,7 @@ header {
 .logo{
   height: 40px;
   width: auto;
-  background-image: url("/projects/Amazon/assets/images/amazon_logo.png");
+  background-image: url("/html/projects/Amazon/assets/images/amazon_logo.png");
   background-size: cover;
 }
 
@@ -166,7 +167,7 @@ header {
 }
 
 .logo-1{
-  background-image: url("/projects/Amazon/assets/images/indian-flag-illustrator-country-flags_1082479-19135.webp");
+  background-image: url("/html/projects/Amazon/assets/images/indian-flag-illustrator-country-flags_1082479-19135.webp");
   height: 100%;
   width: 100%;
   background-size: cover;
@@ -270,7 +271,7 @@ header {
 /* main section */
 
 .main{
-  background-image: url("/projects/Amazon/assets/images/bg-6.jpg");
+  background-image: url("/html/projects/Amazon/assets/images/bg.jpg");
   background-size: cover;
   height: 260px;
   max-width: 1500px;
@@ -588,7 +589,7 @@ span{
 .logo{
   height: 50px;
   width: 100%;
-  background-image: url("/projects/Amazon/assets/images/amazon_logo.png");
+  background-image: url("/html/projects/Amazon/assets/images/amazon_logo.png");
   background-size: cover;
 }
 
@@ -647,7 +648,7 @@ span{
 }
 
 .logo-2{
-  background-image: url("/projects/Amazon/assets/images/indian-flag-illustrator-country-flags_1082479-19135.webp");
+  background-image: url("/html/projects/Amazon/assets/images/indian-flag-illustrator-country-flags_1082479-19135.webp");
   height: 15px;
   width: 22px;
   background-size: cover;
