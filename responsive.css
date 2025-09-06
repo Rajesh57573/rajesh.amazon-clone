@@ -1,90 +1,32 @@
 /* =================== Responsive Styles =================== */
 
-/* Tablets */
-@media (max-width: 768px) {
-  .nav {
-    flex-wrap: wrap;
-    height: auto;
-    padding: 10px;
-  }
-
-  .nav-left, 
-  .nav-fill, 
-  .nav-right {
-    width: 100%;
-    justify-content: center;
-    margin: 5px 0;
-  }
-
-  .nav-search {
-    width: 100%;
-  }
-
-  .search-input {
-    font-size: 0.9rem;
-  }
-
-  .panel {
-    overflow-x: auto;
-    white-space: nowrap;
-  }
-
-  .panel-right {
-    width: auto;
-    display: inline-flex;
-  }
-
-  .panel-ops {
-    margin: 0 10px;
-    flex-shrink: 0;
-  }
-
-  .main {
-    height: 180px;
-    background-position: center;
-  }
-
-  .arrow {
-    font-size: 24px;
-    padding: 6px;
-  }
-
-  .footer-panel-4 {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 20px;
-  }
-
-  .lists {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .footer-lists-grid {
-    grid-template-columns: 1fr 1fr;
-    padding-left: 20px;
-  }
-}
-
 /* Phones */
 @media (max-width: 480px) {
-  /* Already existing (from previous steps) */
   .nav-language,
   .nav-return {
-    display: none !important;
+    display: none;
+  }
+
+  .nav-left{
+    justify-content: flex-start;
+    margin: 0;
+  }
+
+  .nav-right{
+    justify-content: flex-start;
+    margin: 0;
   }
 
   .panel {
     overflow-x: hidden;
     white-space: nowrap;
+    justify-content: flex-start;
   }
 
-  .panel-left{
-    display: none;
-  }
   .panel-right {
     flex-wrap: nowrap;
     overflow-x: auto;
+    justify-content: flex-start;
   }
 
   .panel-ops {
@@ -105,39 +47,175 @@
 
   .shop-section {
     display: flex;
-    flex-wrap: wrap; /* keep it in one row */
-    overflow-x: auto;  /* allow horizontal scroll if content overflows */
-    gap: 10px;     /* full viewport width */
-    padding: 0 10px;        /* remove side padding if any */        /* remove side margin if any */
+    flex-direction: column;
+    gap: 10px;
+    padding: 0 10px;
   }
 
-  .shop-section > * {
-    flex: 1 1 100%; /* don't shrink items */
-    max-width: 100%;    /* each item fills 80% of viewport width, adjust as needed */
+  .card {
+    min-width: auto;
+    width: 100%;
   }
 
-  /* ✅ New: Hide Footer Panels 4, 5, 6, and 7 */
   .footer-panel-4,
   .footer-panel-5,
-  .footer-panel-6,
-  .footer-panel-7 {
+  .footer-panel-6{
     display: none;
   }
 }
 
+/* ========== Extra Small Devices (360px and below) ========== */
 @media (max-width: 360px) {
+  html, body {
+    overflow-x: hidden;
+  }
+
+  .add-1 {
+    margin-left: 0;
+    margin-top: 4px;
+    font-size: 0.7rem;
+  }
+
+  .add-2 {
+    margin-left: 0;
+    font-size: 0.8rem;
+  }
+
+  .nav-address {
+    padding: 2px 0;
+  }
+
   .nav-left {
+    align-items: center;
+  }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+  .nav {
     flex-direction: column;
-    align-items: flex-start;
-    gap: 4px;
+    height: auto;
+    padding: 10px;
   }
 
-  .nav-left .address {
-    font-size: 0.75rem;
-    white-space: normal; /* allow wrapping */
+  .nav-left,
+  .nav-fill,
+  .nav-right {
+    width: 100%;
+    justify-content: flex-start;
+    margin: 5px 0;
   }
 
-  .nav-left .update-location {
-    font-size: 0.75rem;
+  .nav-search {
+    width: auto;
+  }
+
+  .panel {
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .panel-right {
+    width: auto;
+    display: inline-flex;
+    overflow-x: auto;
+  }
+
+  .panel-ops {
+    margin: 0 10px;
+    flex-shrink: 0;
+    white-space: nowrap;
+  }
+
+  .panel-ops:nth-child(n+8) {
+    display: none;
+  }
+
+  .panel-right::-webkit-scrollbar {
+    display: none;
+  }
+
+  .main {
+    display: block;
+    width: 100%;
+    position: relative; /*  Space to avoid overlap */
+    z-index: 0;
+    background-position: center;
+    overflow: hidden;
+  }
+
+  /* Optional: Prevent overflow from slider images */
+  .main img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .footer-panel-4,
+  .footer-panel-5,
+  .footer-panel-6{
+    display: none;
+  }
+}
+
+@media(min-width: 769px) and (max-width: 1024px){
+  html, body {
+    overflow-x: hidden;
+  }
+
+  .nav-right{
+    justify-content: flex-end;
+  }
+
+  .nav,
+  .panel,
+  .main,
+  .shop-section {
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+
+  .panel {
+    white-space: nowrap;
+    overflow-x: auto;
+  }
+
+  .panel-ops {
+    flex-shrink: 0;
+    white-space: nowrap;
+  }
+
+  .panel-ops:nth-child(n+9) {
+    display: none;
+  }
+
+  .footer-panel-4,
+  .footer-panel-5,
+  .footer-panel-6{
+    display: none;
+  }
+}
+
+@media(min-width: 1025px){
+  html, body {
+    overflow-x: hidden;
+  }
+
+  .nav,
+  .panel,
+  .main,
+  .shop-section {
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+
+  .panel {
+    white-space: nowrap;
+    overflow-x: auto;
+  }
+
+  .panel-ops {
+    flex-shrink: 0;
+    white-space: nowrap;
   }
 }
