@@ -106,6 +106,10 @@
     margin: 5px 0;
   }
 
+  .nav-language{
+    display: none;
+  }
+
   .nav-search {
     width: auto;
   }
@@ -169,6 +173,10 @@
   .shop-section {
     max-width: 100vw;
     overflow-x: hidden;
+  }
+
+  .nav-language{
+    display: none;
   }
 
   .nav-fill{
