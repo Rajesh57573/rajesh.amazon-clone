@@ -352,12 +352,6 @@ h2{
   cursor: pointer;
 }
 
-.square-box{
-  height: 250px;
-  width: 310px;
-  margin-left: 4px;
-}
-
 .box8-content{
   min-height: 300px;
 }
@@ -374,13 +368,14 @@ h2{
 .box-8{
   font-size: 0.8em;
   font-weight: 500;
-  padding-top: 1px;
+  margin-top: 3px;
   cursor: pointer;
 }
 
 .box8-content-second{
   height: 30px;
   width: 100%;
+  margin-top: 5px;
   cursor: pointer;
 }
 
